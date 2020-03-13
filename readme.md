@@ -3,7 +3,7 @@
 
 You can run here:
 - https://cekvenich.github.io/alp/
-and view source.
+and view console and source.
 
 
 Other:

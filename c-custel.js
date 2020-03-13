@@ -1,5 +1,6 @@
 // get the abestract class:
 import { AlpCustElement } from '/alpSrc/AlpCustElement.js';
+//the next line is the main part of the example:
 export class Custel1 extends AlpCustElement {
 
 template = `
