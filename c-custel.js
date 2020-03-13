@@ -1,6 +1,6 @@
-// get the abestract class:
+// get the abstract class, can get it from CDN also via https://...
 import { AlpCustElement } from '/alpSrc/AlpCustElement.js';
-//the next line is the main part of the example:
+//the next line is the main part of the example, it has the x-data:
 export class Custel1 extends AlpCustElement {
 
 template = `
