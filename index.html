@@ -3,9 +3,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 </head>
 <body>
-  <p>in pg</p>
+  <!-- dialog needs a polyfill if not using chrome -->
+  <p>view console/src</p>
+  
+  <d-custel>
+    <p>This is da dialog!</p>
+    <button id="close">Close</button>
+  </d-custel>
+
+  <button id="show">Open Dialog!</button>
+  <script src="/d-custel.js" type="module"></script>
+  <script>
+    console.log('in pg')
+    document.querySelector('#show').onclick = function() {
+        // send message
+        dispatchEvent(new CustomEvent('ALP', { detail: 'showB' }))
+   }
+  </script>
+
   <!-- pass x-data -->
+  <p>old example, ingore:</p>
   <c-custel x-data="{ foo: 'bar' }" id="c1">
     <p>Slot In</p>
   </c-custel>
+
   <script src="/c-custel.js" type="module"></script>
+</body>

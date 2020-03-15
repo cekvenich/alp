@@ -1,0 +1,21 @@
+
+<head></head>
+<body>
+  <p>oh hi</p>
+  <dialog>
+    <p>This is da dialog!</p>
+    <button id="close">Close</button>
+  </dialog>
+  <button id="show">Open Dialog!</button>
+  <script>
+    var dialog = document.querySelector('dialog')
+    
+    document.querySelector('#show').onclick = function() {
+        dialog.show()
+    }
+    
+    document.querySelector('#close').onclick = function() {
+        dialog.close()
+    }
+  </script>
+<!-- mB v8.3.2 on 2020-03-15T20:47:07.294Z --></body>

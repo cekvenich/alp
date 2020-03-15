@@ -1,0 +1,20 @@
+head
+
+body
+    p oh hi
+    dialog
+        p This is da dialog!
+        button#close Close
+    button#show Open Dialog!
+
+    script. 
+        
+        var dialog = document.querySelector('dialog')
+
+        document.querySelector('#show').onclick = function() {
+            dialog.show()
+        }
+
+        document.querySelector('#close').onclick = function() {
+            dialog.close()
+        }
