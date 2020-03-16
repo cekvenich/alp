@@ -28,15 +28,12 @@ show(det) {
     const dialog = this.sr.querySelector('dialog')
     dialog.show()
     
-    //#closeB
-    document.querySelector('#closeB').onclick = function() {
+    //#closeB - this should be done in a CE lifecyccle event
+    let nodes = this.shadowRoot.querySelector('slot').assignedNodes()
+    nodes[3].onclick = function() {
         dialog.close()
     }
 
-    // playing
-    let nodes = this.shadowRoot.querySelector('slot').assignedNodes()
-
-    console.log(nodes[3])
 }//()
 
 } //class
