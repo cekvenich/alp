@@ -24,7 +24,7 @@ constructor() {
 
 show(det) {
     console.log(det)
-    // this.sr is shadow root from base class
+    // this.sr is shadowroot from base class
     const dialog = this.sr.querySelector('dialog')
     dialog.show()
     
@@ -33,6 +33,10 @@ show(det) {
         dialog.close()
     }
 
+    // playing
+    let nodes = this.shadowRoot.querySelector('slot').assignedNodes()
+
+    console.log(nodes[3])
 }//()
 
 } //class
