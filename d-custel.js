@@ -3,21 +3,24 @@ import { AlpCustElement } from '/alpSrc/AlpCustElement.js';
 
 export class Custel2 extends AlpCustElement {
 // https://gist.github.com/praveenpuglia/0832da687ed5a5d7a0907046c9ef1813
+// https://blog.sessionstack.com/how-javascript-works-the-internals-of-shadow-dom-how-to-build-self-contained-components-244331c4de6e
+// https://googlechromelabs.github.io/howto-components/howto-tabs/
+
 template = `<dialog>
     <slot></slot>
 </dialog>`;
 
 constructor() {
     super()
-        console.log('Comp2')
-        this.setup(this.template); // just a helper function 
+    console.log('Comp2')
+    this.setup(this.template); // just a helper function 
 
-        const THIZ = this
-        addEventListener('ALP', function(event) {
-            THIZ.show(event.detail)
-        })
+    const THIZ = this
+    addEventListener('ALP', function(event) {
+        THIZ.show(event.detail)
+    })
 
-    } //cons
+} //cons
 
 show(det) {
     console.log(det)
@@ -25,16 +28,14 @@ show(det) {
     const dialog = this.sr.querySelector('dialog')
     dialog.show()
     
-    const slot = this.sr.querySelector('slot').assignedNodes()
-    console.log(slot)
+    //#closeB
+    document.querySelector('#closeB').onclick = function() {
+        dialog.close()
+    }
 
-    //this.sr.querySelector('#closeB').onclick = function() {
-    //    dialog.close()
-    //}
+}//()
 
-}
-
-} //custel
+} //class
 
 customElements.define('d-custel', Custel2)
 console.log('loaded')
